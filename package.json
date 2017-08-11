@@ -2,7 +2,7 @@
   "name": "vuetoast",
   "version": "1.0.0",
   "description": "vue toast",
-  "main": "index.js",
+  "main": "./dist/vueToast.js",
   "scripts": {
     "git": "git add . && git commit -m 'modify' && git push origin master"
   },
