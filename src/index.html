@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+		body,div,section,p{
+			margin: 0;
+		    padding: 0;
+		    border: 0;
+		    font-size: 100%;
+		    font: inherit;
+		    vertical-align: baseline;
+		}
+		.main{
+			text-align: center;
+		}
+		.main a{
+			text-decoration: none;
+		}
+	</style>
+    <script src='../node_modules/vue/dist/vue.min.js'></script>
+    <script src="../dist/vueToast.js"></script>
+</head>
+<body>
+    <div id="app" class="main">
+        <h2>vueToast for mobile</h2>
+        <div class="form-group row">
+            <a class="btn btn-primary" href="javascript:;" @click="toast">默认toast</a>
+        </div>
+        <div class="form-group row">
+            <a class="btn btn-info" href="javascript:;" @click="toastOption">5秒后关闭toast</a>
+        </div>
+        <div class="form-group row">
+            <a class="btn btn-success" href="javascript:;" @click="toastCallback">关闭toast后，执行回调</a>
+        </div>
+    </div>
+    
+    <script>
+        new Vue({
+            el: '#app',
+            mounted() {
+                this.$toast.show('测试成功')
+            },
+            methods: {
+                toast() {
+                    this.$toast.show("你好，Taost")
+                },
+                toastOption() {
+                    this.$toast.show("5秒钟后消失",{
+                            duration:5000
+                        })
+                },
+                toastCallback() {
+                    this.$toast.show("消失后有回调", () => {
+                        alert("这里是回调函数")
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>
