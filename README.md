@@ -4,7 +4,7 @@
 
 ## Useage
 
-```
+```javascript
 import VueToast from 'vueToast'
 
 Vue.use(VueToast)

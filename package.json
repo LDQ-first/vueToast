@@ -1,10 +1,10 @@
 {
   "name": "vuetoast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue toast",
   "main": "./dist/vueToast.js",
   "scripts": {
-    "git": "git add . && git commit -m 'modify' && git push origin master"
+    "finish": "git add . && git commit -m 'modify' && git push origin master && npm publish"
   },
   "repository": {
     "type": "git",
